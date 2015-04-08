@@ -47,7 +47,7 @@ describe('numberConvert', function() {
         expect(numberConvert(26)).to.equal("XXVI");
     });
 
-    it('takes 49 and returns, XXXXIX', function() {
+    it('takes 49 and returns, XLIX', function() {
         expect(numberConvert(49)).to.equal("XLIX");
     });
 

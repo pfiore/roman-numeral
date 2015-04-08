@@ -4,7 +4,7 @@ var numberConvert = function(number) {
     return "Invalid Number";
   }
 
-  var ones_digit = { 0: "", 1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X"};
+  var ones_digit = { 0: "", 1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII", 8: "VIII", 9: "IX"};
   var tens_digit = { 0: "", 1: "X", 2: "XX", 3: "XXX", 4: "XL", 5: "L", 6: "LX", 7: "LXX", 8: "LXXX", 9: "XC"};
   var hundreds_digit = { 0: "", 1: "C", 2: "CC", 3: "CCC", 4: "CD", 5: "D", 6: "DC", 7: "DCC", 8: "DCCC", 9: "CM"};
   var thousands_digit = { 0: "", 1: "M", 2: "MM", 3: "MMM"};
@@ -38,18 +38,25 @@ var numberConvert = function(number) {
 
       var result = numberConvert(number);
 
-      $('#roman').text(result);
-
       if (number.length == 0) {
         $("#error").show();
         $("#result").hide();
       }
-
       else {
-      var result = number.join(", ");
       $("#result").show();
       $("#error").hide();
       }
+      $('.roman').text(result);
+
+      event.preventDefault();
+      });
+
+      $("#clear").click(function(event) {
+        $("#result").hide();
+        $("#error").hide();
+        $("#number").val("").focus();
+
+        event.preventDefault();
 
   });
 });
