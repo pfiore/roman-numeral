@@ -63,5 +63,11 @@ describe('numberConvert', function() {
         expect(numberConvert(83)).to.equal("LXXXIII");
     });
 
+    it('takes 83 and returns, LXXXIII', function() {
+        expect(numberConvert(83)).to.equal("LXXXIII");
+    });
 
+    it('takes 100 and returns, C', function() {
+        expect(numberConvert(100)).to.equal("C");
+    });
 });

@@ -2,6 +2,14 @@ var numberConvert = function(number) {
   var digits = { 0: "", 1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII", 8: "VIII", 9: "IX", 10: "X"};
   var str_output = "";
 
+  var hundreds = parseInt(number / 100);
+  number = number % 100;
+
+  for(var i = 1; i <= hundreds; i++)
+  {
+    str_output = str_output + "C";
+  }
+
   var fifties = parseInt(number / 50);
   number = number % 50;
 
