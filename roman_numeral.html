@@ -5,27 +5,27 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-1.11.2.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Coin Combo</title>
+  <title>Roman Numerals</title>
 </head>
 <body>
 
   <header>
-    <h1>Enter the number of cents you have!</h1>
+    <h1>Enter a digit and convert it to Roman Numerals</h1>
   </header>
   <div class="container">
 
     <div class="row">
 
       <div class="col-md-6">
-        <form id="coin-combo">
+        <form id="converter">
           <div class="form-group">
-            <label for="cents">Enter amount in cents:</label>
-            <input id="cents" type="number">
+            <label for="number">Enter number:</label>
+            <input id="number" type="number">
           </div>
           <br>
           <div class="btn-group">
             <button type="submit" class="btn btn-info">
-              <span class="glyphicon glyphicon-usd"></span> Find out!
+              <span class="glyphicon glyphicon-grain"></span> Convert
             </button>
             <button id="clear" type="submit" class="btn btn-danger">
               <span class="glyphicon glyphicon-remove"></span> Clear
@@ -37,7 +37,7 @@
           <h2 class="text-danger"> !--Error, invalid input--! </h2>
         </div>
         <div id="result">
-          <h3>Your change will be <span class="coins"></span>, now pay up.</h3>
+          <h3><span class="roman"></span></h3>
         </div>
       </div>
     </div>

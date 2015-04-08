@@ -48,7 +48,7 @@ describe('numberConvert', function() {
     });
 
     it('takes 49 and returns, XXXXIX', function() {
-        expect(numberConvert(49)).to.equal("XXXXIX");
+        expect(numberConvert(49)).to.equal("XLIX");
     });
 
     it('takes 50 and returns, L', function() {
@@ -63,11 +63,52 @@ describe('numberConvert', function() {
         expect(numberConvert(83)).to.equal("LXXXIII");
     });
 
-    it('takes 83 and returns, LXXXIII', function() {
-        expect(numberConvert(83)).to.equal("LXXXIII");
+    it('takes 99 and returns, XCIX', function() {
+        expect(numberConvert(99)).to.equal("XCIX");
     });
 
     it('takes 100 and returns, C', function() {
         expect(numberConvert(100)).to.equal("C");
     });
+
+    it('takes 149 and returns, CXLIX', function() {
+        expect(numberConvert(149)).to.equal("CXLIX");
+    });
+
+    it('takes 199 and returns, CXCIX', function() {
+        expect(numberConvert(199)).to.equal("CXCIX");
+    });
+
+    it('takes 333 and returns, CCCXXXIII', function() {
+        expect(numberConvert(333)).to.equal("CCCXXXIII");
+    });
+
+    it('takes 499 and returns, CDXCIX', function() {
+        expect(numberConvert(499)).to.equal("CDXCIX");
+    });
+
+    it('takes 500 and returns, D', function() {
+        expect(numberConvert(500)).to.equal("D");
+    });
+
+    it('takes 999 and returns, CMXCIX', function() {
+        expect(numberConvert(999)).to.equal("CMXCIX");
+    });
+
+    it('takes 1000 and returns, M', function() {
+        expect(numberConvert(1000)).to.equal("M");
+    });
+
+    it('takes 3999 and returns, MMMCMXCIX', function() {
+        expect(numberConvert(3999)).to.equal("MMMCMXCIX");
+    });
+
+    it('takes 4000 and returns, Invalid Number', function() {
+        expect(numberConvert(4000)).to.equal("Invalid Number");
+    });
+
+    it('takes 0 and returns, Invalid Number', function() {
+        expect(numberConvert(0)).to.equal("Invalid Number");
+    });
+
 });
